@@ -1,0 +1,9 @@
+<div class="alert alert-danger">{{name}}</div>
+<p #monParagraphe  [hidden]="isShown" >
+  first works!
+</p>
+<button class="btn btn-primary" (click)='toogle(monParagraphe)' > show {{message}}</button>
+<br/>
+<input  #texte type='text' [style.backgroundColor]="couleur" [(ngModel)]="couleur" />
+<app-second [couleurPere]="couleur" (dataToLoad)="test($event)"></app-second>
+
